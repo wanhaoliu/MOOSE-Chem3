@@ -1,0 +1,100 @@
+You are an experienced chemical scientist tasked with classifying and evaluating a Generated Scientific Hypothesis against a Ground Truth Scientific Hypothesis. I will provide the scientific question, the key points of the Ground Truth Scientific Hypothesis, and **Generated Scientific Hypothesis Analysis and Scoring**, which includes the Generated Scientific Hypothesis Key Points and their corresponding classified Ground Truth Scientific Hypothesis Key Points based on similar mechanisms of action. Your task is as follows:
+
+1. **Validate the Generated Scientific Hypothesis Key Points:**  
+     
+   -Begin by confirming the list of Generated Scientific Hypothesis Key Points explicitly provided in the Generated Scientific Hypothesis Analysis and Scoring. Only these points must be evaluated; do not infer, add, or evaluate any additional points not explicitly listed in this section of the input, even if they appear in the Ground Truth Scientific Hypothesis Key Points.
+
+2. **Classify the Generated Scientific Hypothesis Key Points:**  
+   - For each explicitly provided Generated Scientific Hypothesis Key Point, group it under its corresponding Ground Truth Scientific Hypothesis Key Point category based on classification and functional similarity (e.g., shared mechanisms of action or roles).  
+   - If no corresponding Ground Truth category exists for a Generated Key Point, classify it under a "Non-Matching" category.  
+   - Exclude any Ground Truth category from the output if it has no matching Generated Key Points explicitly listed in the Generated Scientific Hypothesis Analysis and Scoring, regardless of its presence in the Ground Truth..
+
+
+3. **Rank the Key Points:**  
+   - Within each Ground Truth category, rank the Generated Key Points from highest to lowest score based on their calculated scores. If a category contains only one Generated Key Point, assign it rank 1. If a Ground Truth category has no matching Generated Key Points, do not include that Ground Truth category in the output
+   - Place the "Non-Matching" category at the end of the output, if present.
+
+4. **Evaluate and Compare:**  
+   - For each Generated Scientific Hypothesis Key Point, compare it to its classified Ground Truth Scientific Hypothesis Key Point from a chemical expert’s perspective, focusing on their mechanisms of action, roles, and contributions to the scientific question.  
+   - Assign a **Percentage of Similarity Based on Function and Role** (in percentage, 0% to 100%) based on how closely the Generated Key Point’s function aligns with the Ground Truth Key Point.  
+   - Calculate the score as: \( \text{Percentage of Similarity} \times \text{Maximum Points} = \text{Score} \), where Maximum Points is the Contribution Score of the corresponding Ground Truth Key Point (e.g., 40 for PVA Gel, 35 for redox pair, 25 for Oriented Polymerization). For "Non-Matching" points, use 0 as the Maximum Points unless otherwise specified.  
+   - If the provided similarity percentage or scoring in the input seems insufficiently rigorous or inconsistent with chemical principles, provide reasons for revision and adjust the score accordingly with a clear explanation.
+
+5. **Output Format:**  
+   - Use the following structure for each category, including only categories with explicitly provided Generated Key Points from the Generated Scientific Hypothesis Analysis and Scoring: 
+     ***Ground Truth Scientific Hypothesis Category: [Ground Truth Key Point Name]***  
+     [Rank]. [Generated Scientific Hypothesis Key Point Name]  
+         Function and Role: [Description of the function and role from Generated Hypothesis]  
+         Classification: [Classified Corresponding Ground Truth Scientific Hypothesis Key Point]  
+         Ground Truth Scientific Hypothesis Function and Role: [Description of the ground truth function and role]  
+         Comparison with Ground Truth Hypothesis: [Explanation of how the generated hypothesis compares to the ground truth]  
+         Percentage of Similarity Based on Function and Role: [Percentage]  
+         Calculated Score: [Percentage] × [Maximum Points] = [Score]  
+         Revised Score: [Explanation of revision if necessary, or "No revision needed"]  
+   - Ensure category headers use the exact Ground Truth Scientific Hypothesis Key Point names (e.g., "10 wt% Polyvinyl Alcohol (PVA) Gel").  
+   - Include a "Non-Matching" category at the end for any Generated Key Points without a Ground Truth match.  
+   - At the end, provide the **Total Contribution Score from Generated Hypothesis** by summing all calculated (or revised) scores.
+
+6. **Additional Rules:**  
+   - "Strictly limit the evaluation to Generated Key Points explicitly listed in the Generated Scientific Hypothesis Analysis and Scoring section of the input. Do not include or evaluate any Ground Truth Key Points unless they are also explicitly listed as Generated Key Points in this section.  
+   - If the input provides pre-calculated similarity percentages or scores, use them as a starting point but adjust if chemically unjustified, with reasoning.
+
+
+Example
+
+Given your input:
+
+- Scientific Question: "How can we design a polymer thermoelectric device with good mechanical properties that can sustainably harvest energy from the temperature difference between body heat and the surrounding environment for thermoelectric conversion, achieving high thermoelectric conversion efficiency?"
+- Ground Truth Scientific Hypothesis Key Points:
+  1. **Ionogel-Based System** (15 points)  
+  2. **0.4 M Potassium Ferricyanide and Potassium Ferrocyanide (K₃[Fe(CN)₆] / K₄[Fe(CN)₆]) Solution** (35 points)  
+  3. **Oriented Polymerization** (35 points)  
+  4. **Chaotropic Effect**(15 points) 
+- Generated Scientific Hypothesis Analysis and Scoring:  
+  1. **Acrylamide with 0.3-0.5% Crosslinking Agents **  
+  2. **Graphene Oxide Nanofillers**  
+  3. **10 wt% Negatively Charged Silica Dispersion (Ludox HS-40)**
+  4. **Calcium Ions (0.5 M)**    
+
+Here’s the corrected output:
+
+***Ground Truth Scientific Hypothesis Category: Ionogel-Based System***  
+1. Acrylamide with 0.3-0.5% Crosslinking Agents  
+Function and Role: Provides mechanical integrity and elasticity, ensuring material stability over a wide temperature range.  
+Classification: Ionogel-Based System  
+Ground Truth Scientific Hypothesis Function and Role: Provides medium support, ensuring thermoelectric effects and system stability.  
+Comparison with Ground Truth Hypothesis: The generated key point’s role in mechanical integrity aligns with the ground truth’s stability support. However, its contribution to thermoelectric effects (e.g., ion transport) is less direct, as crosslinking primarily enhances structure, not conductivity.  
+Percentage of Similarity Based on Function and Role: 70%  
+Calculated Score: 70% × 15 points = 10.5 points  
+Revised Score: No revision needed  
+
+2. Graphene Oxide Nanofillers  
+Function and Role: Enhance mechanical strength and conductivity.  
+Classification: Ionogel-Based System  
+Ground Truth Scientific Hypothesis Function and Role: Provides conductive environment and material stability, supporting system performance.  
+Comparison with Ground Truth Hypothesis: The generated key point enhances conductivity and strength, aligning with the ground truth’s goals. However, graphene oxide’s rigidity may compromise the ionogel’s flexibility, potentially reducing stability in dynamic conditions. The initial 85% overestimates compatibility.  
+Percentage of Similarity Based on Function and Role: 85%  
+Calculated Score: 85% × 15 points = 12.75 points  
+Revised Score: 40% × 15 points = 6 points [Revised due to potential damage to flexibility and stability from graphene’s hardness]  
+
+***Ground Truth Scientific Hypothesis Category: Chaotropic Effect***  
+3. Calcium Ions (0.5 M)  
+Function and Role: Provide ionic conductivity, enhance thermoelectric properties, and improve system conductivity by promoting ion movement.  
+Classification: Chaotropic Effect  
+Ground Truth Scientific Hypothesis Function and Role: Enhances ionic conductivity by disrupting the ordered structure between molecules, improving thermoelectric performance.  
+Comparison with Ground Truth Hypothesis: The generated key point’s ionic conductivity via ion movement aligns with the ground truth’s chaotropic disruption of molecular order. While the specific mechanism (disorder) isn’t explicit, the functional outcome (thermoelectric enhancement) is similar.  
+Percentage of Similarity Based on Function and Role: 60%  
+Calculated Score: 60% × 30 points = 18 points  
+Revised Score: No revision needed  
+
+***Non-Matching***  
+4. 10 wt% Negatively Charged Silica Dispersion (Ludox HS-40)  
+   Function and Role: The incorporation of Ludox HS-40 introduces negatively charged silica nanoparticles into the gel matrix, enhancing mechanical stability and modifying ionic conductivity through electrostatic interactions.  
+   Classification: Non-Matching  
+   Ground Truth Scientific Hypothesis Function and Role: Not applicable  
+   Comparison with Ground Truth Hypothesis: This key point does not correspond to any Ground Truth Key Point. The Ground Truth focuses on PVA, the redox pair, and oriented polymerization, with no mention of silica or similar nanoparticles contributing to the thermoelectric device.  
+   Percentage of Similarity Based on Function and Role: 0%  
+   Calculated Score: 0% × 0 points = 0 points  
+   Revised Score: No revision needed  
+
+Now please proceed with the analysis.The output must strictly follow the Output Format. Do not output other content.

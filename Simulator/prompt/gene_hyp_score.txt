@@ -1,0 +1,81 @@
+You are an experienced chemical scientist tasked with evaluating a generated scientific hypothesis by scoring its key points against a ground truth scientific hypothesis. I will provide the scientific question, the ground truth hypothesis with its key points and their scores, and the generated hypothesis with its key points. Your role is to assess each key point in the generated hypothesis by comparing it to the ground truth key points, focusing on their mechanistic roles and functions relative to the scientific question, and assigning a similarity score based on defined guidelines.
+
+### Classification and Scoring Guidelines
+#### Classification
+- Match each generated key point to the most similar ground truth key point based on mechanistic role and function relative to the scientific question, even if materials, methods, or specific implementations differ.
+- If a generated key point aligns with multiple ground truth key points, select the one with the closest mechanistic and functional contribution.
+- If a generated key point has even minimal mechanistic or functional similarity to a ground truth key point (e.g., shared contribution to structural support, ion conduction, or thermoelectric enhancement), classify it under that ground truth key point with a low similarity score (e.g., 1%–10%) rather than "Non-Matching." Examples include:
+  - Structural support for thermoelectric materials.
+  - Facilitation of ion mobility or conductivity.
+  - Enhancement of stability or responsiveness to thermal gradients.
+- Classify as "Non-Matching" only if there is no identifiable mechanistic or functional overlap with any ground truth key point, even at an abstract level.
+
+#### Scoring Situations
+- **Situation A**: The generated key point has the exact same name and chemical identity as the ground truth key point (e.g., "10 wt% PVA" vs. "10 wt% PVA"). Similarity = 100%. Note: Differences in chemical composition (e.g., distinct compounds, ions, or molecular structures like "Fe³⁺/Fe²⁺" vs. "[Fe(CN)₆]³⁻/[Fe(CN)₆]⁴⁻") preclude classification as Situation A, even if roles and functions are highly similar.
+- **Situation B**: The generated key point encompasses the ground truth key point (e.g., "Ice-Templating Method" includes "Directional Freezing Method"). Similarity ≤ 65%, based on functional and role overlap.
+- **Situation C**: The ground truth key point encompasses the generated key point (e.g., "Liquid Metal" includes "Liquid Mercury"). Similarity ≤ 55%, based on functional and role overlap.
+- **Situation D**: The key points differ in material, chemical composition, or method but share related mechanisms and functions (e.g., "10 wt% PVA" vs. "PAAm Hydrogel" as structural matrices supporting ionic conduction, or "Fe³⁺/Fe²⁺" vs. "[Fe(CN)₆]³⁻/[Fe(CN)₆]⁴⁻" as redox pairs). Similarity ≤ 45%, with:
+1%–10% for minimal overlap (e.g., shared structural support or conductivity enhancement with significant material differences).
+11%–45% for moderate to strong overlap (e.g., similar mechanisms with differing implementations), quantified based on chemical and functional similarity
+- **Non-Matching**: No overlap in mechanisms, functions, or substances (e.g., "Guanidine Sulfate" vs. "PEDOT:PSS Enhancement"). Similarity = 0%.
+
+#### Parameter Considerations
+- For key points with numerical parameters (e.g., concentration, mass fraction):
+  - If the generated value is lower than the ground truth (e.g., 5 wt% vs. 10 wt%), treat as Situation B (≤ 65%).
+  - If higher (e.g., 15 wt% vs. 10 wt%), treat as Situation C (≤ 55%).
+  - Adjust similarity within the upper limit based on the parameter difference: smaller differences yield higher similarity, reflecting functional impact.
+
+### Analysis Process
+1. **Initial Comparison**: Compare the names of the generated and ground truth key points.
+   - If identical in name and chemical composition (e.g., "10 wt% PVA" vs. "10 wt% PVA"), classify as Situation A (100%).
+   - If different, proceed to mechanistic and functional analysis，and classify into Situation B, C, D, or Non-Matching based on the degree of overlap.
+2. **Mechanistic and Functional Evaluation**: Analyze the role and function of the generated key point in the context of the scientific question, comparing it to the ground truth key points.
+   - Identify any shared contributions (e.g., structural support, ion conduction, stability) and classify into Situation B, C, or D based on the degree of overlap.
+   - Assign a low similarity score (1%–10%) for minimal overlap if no stronger match exists, avoiding "Non-Matching" unless absolutely no connection is present.
+   - Classify as Non-Matching only if no mechanistic or functional link can be established.
+3. **Chemical Expertise**: Leverage your knowledge to assess mechanisms (e.g., charge transport, structural support), roles, and functions (e.g., stability, conductivity), focusing on their contributions to experimental outcomes.
+   - For Situation B/C: Score ≤ 65% or ≤ 55% based on inclusion and functional overlap.
+   - For Situation D: Score ≤ 45%, with 1%–10% for minimal overlap (e.g., differing materials with shared support roles) and 11%–45% for stronger mechanistic similarity (e.g., redox pairs with differing ligands), quantified based on chemical principles.
+   - Consider chemical interactions among key points (e.g., polymer-redox couple synergy) when relevant.
+4. **Scoring Calculation**: Multiply the similarity percentage by the ground truth key point’s score to compute the final score. For Non-Matching, score = 0.
+
+### Output Format
+- **Name of Generated Key Point**  
+- **Role and Function of the Generated Hypothesis**: [Description of its role and function]  
+- **Classification**: [Matched Ground Truth Key Point or "Non-Matching"]  
+- **Ground Truth Role and Score**: [Role and function; Score: X points]  
+- **Comparison with Ground Truth**: [Detailed mechanistic and functional comparison]  
+- **Similarity Percentage**: [Y%]  
+- **Situation**: [A, B, C, D, or Non-Matching]  
+- **Calculated Score**: [Y%] × [X points] = [Z points]  
+ 
+### Example
+1. **Calcium Ions (0.5M)**  
+- **Role and Function of the Generated Hypothesis**: Enhance ionic conductivity and thermoelectric performance by promoting ion mobility.  
+- **Classification**: Chaotropic Effect  
+- **Ground Truth Role and Score**: Disrupts molecular order to boost ionic conductivity and thermoelectric performance; Score: 30 points  
+- **Comparison with Ground Truth**: Calcium ions (0.5M) are a specific contributor to the broader chaotropic effect, aligning in function (conductivity enhancement) but narrower in scope. Situation C applies (≤ 55%), with 40% similarity due to strong functional overlap.  
+- **Similarity Percentage**: 40%  
+- **Situation**: C  
+- **Calculated Score**: 40% × 30 points = 12 points  
+
+2. **Graphene Oxide Nanofillers**  
+- **Role and Function of the Generated Hypothesis**: Enhance mechanical strength and electrical conductivity.  
+- **Classification**: Graphene Oxide Nanofillers  
+- **Ground Truth Role and Score**: Boosts mechanical strength and conductivity; Score: 15 points  
+- **Comparison with Ground Truth**: Identical in substance and function, fully aligning in role. Situation A applies.  
+- **Similarity Percentage**: 100%  
+- **Situation**: A  
+- **Calculated Score**: 100% × 15 points = 15 points  
+
+3. **PAMPSNa (2-Acrylamido-2-methylpropane sulfonic acid sodium salt)**  
+   - **Role and Function of the Generated Hypothesis**: PAMPSNa enhances ionic conductivity through the facilitation of ion movement in the hydrogel matrix. The sulfonic acid groups contribute to improved thermal gradient response and electrochemical activity, optimizing thermoelectric performance.  
+   - **Classification**: 10 wt% PVA (Polyvinyl Alcohol)  
+   - **Ground Truth Role and Score**: Serves as the primary matrix material providing structural integrity and facilitating the gel phase for thermoelectric enhancement; Score: 40 points  
+   - **Comparison with Ground Truth**: PAMPSNa differs in material (sulfonic acid-based polymer vs. PVA), but both contribute to the hydrogel matrix supporting thermoelectric performance. PAMPSNa’s ionic conductivity enhancement aligns indirectly with PVA’s role in enabling other species to enhance thermoelectric effects. Situation D applies with minimal overlap (shared matrix support role), warranting a low similarity score.  
+   - **Similarity Percentage**: 5%  
+   - **Situation**: D  
+   - **Calculated Score**: 5% × 40 points = 2 points  
+
+If a Generated key point has even minimal mechanistic or functional similarity to a Ground Truth key point (e.g., shared contribution to the scientific question), classify it under that Ground Truth key point with a low similarity score (e.g., 1%) rather than "Non-Matching."
+Now please proceed with the analysis. The output must strictly follow the specified Output Format and include only the analysis of the Generated Hypothesis key points. Do not include additional content beyond the formatted output.
