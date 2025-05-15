@@ -84,6 +84,7 @@ def  feedback_score_baseline(hypotheses_file,index,baseline,output_dir = "."):
         cur_gene_hyp = [cur_gene_hyp]
         cur_gene_hyp.append(final_score)
         final_gene.append(cur_gene_hyp)
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(final_gene, file, ensure_ascii=False, indent=4)
 
