@@ -1,4 +1,4 @@
-# ChemsimX: Experiment-Guided Hypothesis Ranking for Scientific Discovery
+# ChemsimX: Toward Experiment-Guided Scientific Hypothesis Ranking with Simulated Experimental Feedback
 
 ## Overview
 ChemsimX is a Python-based tool for **experiment-guided hypothesis ranking** in automated scientific discovery, focused on chemistry. It prioritizes hypotheses using empirical outcomes from prior experiments, outperforming traditional pre-experiment ranking methods.
@@ -66,4 +66,44 @@ Run simulation for 30 chemical questions:
 ```bash
 python ./Method/simulation_validation.py --num <id> --rep <repetitions> --correction_factor 0
 ```
-- `<id>`: Question ID (1 to 30
+- `<id>`: Question ID (1 to 30).
+- `<repetitions>`: Number of simulation repetitions.
+- `--correction_factor 0`: Disable correction (default: 1 to enable).
+
+### Simulation Baseline
+Run baseline simulation with Matched Score or Continuous Score:
+```bash
+python ./Method/simulation_baseline.py --num <id> --rep <repetitions> --baseline <1|2>
+```
+- `<id>`: Question ID (1 to 30).
+- `<repetitions>`: Number of repetitions.
+- `--baseline`:
+  - `1`: Continuous Score.
+  - `2`: Matched Score.
+
+### Simulator Evaluation
+Compare simulated results with real experiment outcomes:
+```bash
+python ./Method/simulator_evaluate.py --data_path Data/real_experiment_normalized_values.json --method_path <method_output>
+```
+- `--data_path`: Path to 124 real experiment results (default: `Data/real_experiment_normalized_values.json`).
+- `<method_output>`: Path to simulated results.
+
+## Dependencies
+See `requirements.txt` for details:
+- `openai==1.2.0`
+- `numpy`
+- `scipy`
+- `scikit-learn`
+- `requests`
+
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit changes (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+## Contact
+For questions, contact [wanhaoliu](https://github.com/wanhaoliu) or open an issue.
