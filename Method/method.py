@@ -93,11 +93,11 @@ def hypothesis_method(filepath, research_question_filepath, output_dir, stop_num
 
         while True:
             result,hypotheses_file = choose_hypothesis_method(filepath,research_question_filepath,data_path,index,score_path,hypotheses_file,output_dir)
-            # 获得结果 将结果增加到score_path中 文件地址不变
+       
             score_path = feedback_score_method (filepath,hypotheses_file,index,score_path,research_question_filepath,output_dir)
             number += get_json_length(hypotheses_file)
             print(f"***The experiment has currently been conducted {number} times***")
-            # 将结果进行判断分析记录次数  
+          
             i+=1
             print(f"***************************{i}******************************")
             check_list = extract_first_elements(result)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
     
 
-    output_dir = r"./output//{}".format(args.num) #output path"
+    output_dir = r"./output/{}".format(args.num) #output path"
     stop_num = args.num
     # baseline = args.baseline
 
