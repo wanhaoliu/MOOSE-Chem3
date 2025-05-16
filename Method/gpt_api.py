@@ -2,24 +2,11 @@ import time
 import requests
 import json
 
-# Baseurl = "https://api.claudeshop.top"
-# Skey = "sk-ESaMW4UBGX1Y3YfFRjo74TIFaDlmyS5o16zHReiBGgxvYvo4"
-# Skey ="sk-JTm49RbiDIuG9rMxXFuOQrmhTvaQjDaAH9c0yFwjebDInbGX"
-Baseurl ="http://35.220.164.252:3888/"
-Skey = "sk-b7QfNvfuYfn7ZyvGeTz9Ol37dQaUph829zxdGfXzMT2GCDlp"
 
-# Skey = "sk-BzAetTYOwKxji5BnJiW3VBhbDIyVsp5Uo2leR9XYxXEHThjr"
+Baseurl =""
+Skey = ""
 
 
-# Skey = "sk-svowCeqZw45Y7t1GJnuiOw5v9Rg9btsqWbPEa9IBSshZj4bm"
-# Skey = "sk-fwarlRh82SYNbVQKxglcjXjHfLQ9yT8spFDuRQXbe4dhrvMx"
-# Function to make API requests with retries
-# Baseurl = "https://boyuerichdata.chatgptten.com"
-
-
-# https://api.claudeshop.top/v1
-# https://dashscope.aliyuncs.com/compatible-mode/v1
-# https://boyuerichdata.chatgptten.com/v1/
 def api_request(messages,temperature = 1.0, max_retries=60, sleep_time=15):
     # url = Baseurl + "/v1/chat/completions"
     url = Baseurl + "/v1/chat/completions"
