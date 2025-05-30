@@ -20,7 +20,7 @@ Key features:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/wanhaoliu/ChemsimX.git
+   git clone https://github.com/wanhaoliu/MOOSE-Chem3.git
    cd ChemsimX
    ```
 2. Create a Conda environment:
