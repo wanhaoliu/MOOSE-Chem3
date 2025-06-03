@@ -21,7 +21,7 @@ Key features:
 1. Clone the repository:
    ```bash
    git clone https://github.com/wanhaoliu/MOOSE-Chem3.git
-   cd ChemsimX
+   cd MOOSE-Chem3.git
    ```
 2. Create a Conda environment:
    ```bash
