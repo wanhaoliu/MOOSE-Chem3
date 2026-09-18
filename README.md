@@ -1,7 +1,7 @@
-# ChemsimX: Toward Experiment-Guided Scientific Hypothesis Ranking with Simulated Experimental Feedback
+# MOOSE-Chem3: Feedback-Guided In-Context Adaptation for Scientific Hypothesis Ranking
 
 ## Overview
-ChemsimX is a Python-based tool for **experiment-guided hypothesis ranking** in automated scientific discovery, focused on chemistry. It prioritizes hypotheses using empirical outcomes from prior experiments, outperforming traditional pre-experiment ranking methods.
+MOOSE-Chem3 is a Python-based tool for **feedback-guided scientific hypothesis ranking** in automated scientific discovery, focused on chemistry. It prioritizes hypotheses using empirical outcomes from prior experiments, outperforming traditional pre-experiment ranking methods.
 
 Key features:
 - Simulator modeling hypothesis performance based on similarity to ground truth with noise perturbation.
@@ -25,11 +25,11 @@ Key features:
    ```
 2. Create a Conda environment:
    ```bash
-   conda create -n chemsimx python=3.8
+   conda create -n moose-chem3 python=3.8
    ```
 3. Activate the environment:
    ```bash
-   conda activate chemsimx
+   conda activate moose-chem3
    ```
 4. Install dependencies:
    ```bash
@@ -104,5 +104,4 @@ Contributions are welcome! To contribute:
 3. Commit changes (`git commit -m "Add your feature"`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a Pull Request.
-
 
