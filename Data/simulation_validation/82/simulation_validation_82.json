@@ -1,0 +1,14 @@
+[
+ [
+  "How to improve the subthreshold swing of indium-gallium-zinc-oxide field-effect transistors through the implementation of a graphene cold-source architecture?"
+ ],
+ [
+  "Conventional IGZO FET with Au/Cr source metal and 10 nm Al2O3 gate dielectric (minimum value)."
+ ],
+ [
+  "Conventional IGZO FET with Au/Cr source metal and 10 nm Al2O3 gate dielectric (minimum value).",
+  "IGZO CSFET with a single-layer graphene cold source and 10 nm Al2O3 gate dielectric (minimum value).",
+  "8x8 IGZO CSFET array with a single-layer graphene cold source and 10 nm HfO2 gate dielectric (average value).",
+  "IGZO CSFET with a single-layer graphene cold source and 10 nm HfO2 gate dielectric (minimum value)."
+ ]
+]

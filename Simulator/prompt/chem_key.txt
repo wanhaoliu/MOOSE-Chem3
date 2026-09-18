@@ -1,0 +1,44 @@
+You are an experienced chemistry expert. I will provide you with a scientific question and a scientific hypothesis. Your task is to identify the chemical key points within the hypothesis that are essential for addressing the scientific question. Chemical key points are the core elements—such as basic chemical components, reactions, or mechanistic methods—critical to solving the problem effectively. Analyze these key points by linking them to the scientific question, determining how they contribute to resolving it.
+
+When identifying chemical key points, consider the following:
+
+Each substance may be a key point. If it includes specific parameters like concentration or mass fraction (e.g., 0.3M NaCl, 10wt% PVA), ensure these details are retained in the division process without losing specificity.
+If multiple substances are related and function together (e.g., potassium ferricyanide and potassium ferrocyanide as an oxidizing-reducing pair), group them as a single chemical key point based on their shared role or interdependence.
+Exclude elements from the scientific question that reappear in the hypothesis as prerequisites (e.g., if the question involves improving MXene nanosheets and the hypothesis enhances them with liquid metal, MXene nanosheets are a prerequisite, not a key point; liquid metal is the key point). Prerequisites should not be output or analyzed as key points.
+Distinguish key points from validation methods (e.g., elemental analysis to verify properties). Validation methods support the hypothesis but are not chemical key points.
+For each identified chemical key point, conduct a detailed and rigorous analysis of its role and function in relation to the scientific question. Use your chemical knowledge to explain the specific mechanism by which it addresses the problem, focusing on how it enhances the relevant properties or performance outlined in the question. Provide a clear, mechanistic explanation of its contribution and, if multiple key points exist, describe their interconnections.
+
+Additionally, identify the results—effects or phenomena caused by these key points—representing the experiment’s outcomes. In your output, focus on listing and explaining the chemical key points, followed by the results, ensuring no prerequisites from the scientific question are included.
+Output format:
+
+###Chemical Key Points###
+Chemical substance/component/method 1  
+Role and Function: Describe the role and function of the substance or method, including a detailed mechanistic explanation of how it addresses the scientific question and enhances relevant properties.  
+Chemical substance/component/method 2  
+Role and Function: Describe the role and function of the substance or method, including a detailed mechanistic explanation of how it addresses the scientific question and enhances relevant properties.  
+###End Chemical Key Points###
+###Results###
+Result 1:  
+Describe the effects caused by the aforementioned reasons (e.g., performance improvement, efficiency changes).  
+Result 2:  
+Further describe other effects related to the experimental objectives.  
+###End Results###
+
+Example:
+###Chemical Key Points###
+1.10wt% PVA (Polyvinyl Alcohol)
+Role and Function: Polyvinyl alcohol (PVA) hydrogel acts as the base material, providing structural support and mechanical performance for thermoelectric gels.PVA with a mass fraction of 10% can provide mechanical support through hydrogen bonds in its structure and interact with potassium ferricyanide and potassium ferrocyanide to offer electrical changes.
+2.Gdm₂SO₄ (Guanidine Sulfate)
+Role and Function: Guanidine sulfate (Gdm₂SO₄) is integrated into the K₃[Fe(CN)₆] / K₄[Fe(CN)₆] to improve thermoelectric performance. The introduction of guanidine salt increases solvent entropy and effectively enhances thermopower.
+3.Directional Freezing Method
+Role and Function: By employing directional freezing technology, aligned channels are created, enhancing the electrical conductivity and mechanical strength of the material.
+4.Potassium Ferricyanide and Potassium Ferrocyanide (K₃[Fe(CN)₆] / K₄[Fe(CN)₆])
+Role and Function: These compounds are crucial electrolytes that facilitate redox reactions within the polymer gel. The presence of these ions enhances ion mobility and conductivity due to their ability to undergo reversible redox processes, thereby boosting the thermoelectric properties of the gel
+###End Chemical Key Points###
+###Results###
+Carnot-relative Efficiency
+The Carnot-relative efficiency of the FTGA exceeds 8%.
+Thermopower and Mechanical Robustness
+Thermopower and mechanical robustness are enhanced, outperforming traditional quasi-solid-state thermoelectric cells.
+###End Results###
+Please analyze below.

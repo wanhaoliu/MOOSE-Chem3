@@ -1,0 +1,107 @@
+You are an experienced chemical scientist tasked with selecting and scoring Generated Scientific Hypothesis Key Points based on their alignment with Ground Truth Scientific Hypothesis Key Points. I will provide the Ground Truth Scientific Hypothesis Key Points and the Generated Scientific Hypothesis Analysis and Scoring, which includes each Generated Scientific Hypothesis Key Point, its classified Ground Truth Scientific Hypothesis Key Point, similarity percentage, and calculated score. Your task is as follows:
+
+**Classify and Select:**
+- Group the Generated Scientific Hypothesis Key Points under their corresponding Ground Truth Scientific Hypothesis Key Point categories based on the provided classification.
+- For each Ground Truth category, select the Generated Key Point with the highest calculated score as the representative key point.
+- If a Ground Truth category has no matching Generated Key Points, record it with a score of 0 and note the absence of hypotheses.
+
+**Handle Multiple Key Points:**
+- If a Ground Truth category contains multiple Generated Key Points, record only the highest-scoring key point’s score without duplication. Other key points in the category are noted (via "Yes" under "Does this category have other scientific hypotheses?") but do not contribute to the final score beyond indicating their presence.
+
+**Scoring:**
+- Report the calculated score of the highest-scoring Generated Key Point per Ground Truth category (or 0 if no matching key points exist).
+- Compute the final total score by summing the representative scores across all Ground Truth categories.
+
+**Output:**
+- Present the results strictly in the specified format, including all Ground Truth categories (even those without matches) and the final total score.
+- List categories in the order of Ground Truth Key Points, with "Non-Matching" (if present) at the end.
+- Ensure clarity, accuracy, and inclusion of the required markers: ###Final Score### [Total Score] ###End Final Score###.
+
+**Guidelines:**
+- **Selection:** Identify the highest-scoring Generated Key Point in each Ground Truth category based on the provided calculated score (Similarity % × Ground Truth Points).
+- **Categories:** Include all Ground Truth Scientific Hypothesis Key Point categories as provided, followed by "Non-Matching" if applicable.
+- **Uniqueness:** Only one key point per category contributes its score to the final total, even if multiple Generated Key Points exist in that category.
+- **Final Score:** Sum the scores of the highest-scoring key points (or 0 for unmatched categories) across all Ground Truth categories, ensuring no duplication within a category.
+
+**Output Format:**
+
+Final Generated Scientific Hypothesis Analysis and Scoring
+
+[Ground Truth Category Name] Category:  
+Highest Scoring Generated Scientific Hypothesis Key Point: [Key Point Name or "None"]  
+Percentage of Similarity Based on Function and Role: [X% or "N/A"]  
+Calculated Score: [X%] × [Y points] = [Z points] or [0 points if no match]  
+Does this category have other scientific hypotheses? [Yes/No]  
+Whether it is the highest-scoring Key Point under this category? [Yes or N/A if no match]  
+Hypothesis Key Point Score: [Z points or 0 points]
+
+[... Repeat for each Ground Truth category ...]
+
+[Non-Matching Category (if applicable)]:  
+Highest Scoring Generated Scientific Hypothesis Key Point: [Key Point Name or "None"]  
+Percentage of Similarity Based on Function and Role: [X%]  
+Calculated Score: [X%] × [Y points] = [Z points]  
+Does this category have other scientific hypotheses? [Yes/No]  
+Whether it is the highest-scoring Key Point under this category? [Yes]  
+Hypothesis Key Point Score: [Z points]
+
+Final Total Score:  
+[Ground Truth Category 1 Name] Category Score: [Score]  
+[Ground Truth Category 2 Name] Category Score: [Score]  
+[... Repeat for each Ground Truth category ...]  
+[Non-Matching Category Score: [Score] (if applicable)]  
+Total Score: [Sum of scores]  
+###Final Score###  
+[Total Score]  
+###End Final Score###
+
+Example:
+Input:
+Ground Truth Scientific Hypothesis Key Points:
+Chaotropic Effect (30 points)
+Ionogel-Based System (15 points)
+Polymer Matrix Stability (55 points)
+Final Generated Scientific Hypothesis Analysis and Scoring
+Generated Scientific Hypothesis Analysis and Scoring:
+Calcium Ions (0.5 M)\Graphene Oxide Nanofillers\γ-Glycine Crystal-Based Wafer-Scale PVA Films
+Output:
+[Chaotropic Effect] Category:  
+Highest Scoring Generated Scientific Hypothesis Key Point: Calcium Ions (0.5 M)  
+Percentage of Similarity Based on Function and Role: 10%  
+Calculated Score: 10% × 30 points = 3 points  
+Does this category have other scientific hypotheses? No  
+Whether it is the highest-scoring Key Point under this category? Yes  
+Hypothesis Key Point Score: 3 points  
+
+[Ionogel-Based System] Category:  
+Highest Scoring Generated Scientific Hypothesis Key Point: Graphene Oxide Nanofillers  
+Percentage of Similarity Based on Function and Role: 5%  
+Calculated Score: 5% × 15 points = 0.75 points  
+Does this category have other scientific hypotheses? No  
+Whether it is the highest-scoring Key Point under this category? Yes  
+Hypothesis Key Point Score: 0.75 points  
+
+[Polymer Matrix Stability] Category:  
+Highest Scoring Generated Scientific Hypothesis Key Point: None  
+Hypothesis Key Point Score: 0 points  
+
+[Non-Matching] Category:  
+Highest Scoring Generated Scientific Hypothesis Key Point: γ-Glycine Crystal-Based Wafer-Scale PVA Films  
+Percentage of Similarity Based on Function and Role: 0%  
+Calculated Score: 0% × 0 points = 0 points  
+Does this category have other scientific hypotheses? No  
+Whether it is the highest-scoring Key Point under this category? Yes  
+Hypothesis Key Point Score: 0 points  
+
+Final Total Score:  
+[Chaotropic Effect] Category Score: 3 points  
+[Ionogel-Based System] Category Score: 0.75 points  
+[Polymer Matrix Stability] Category Score: 0 points  
+[Non-Matching] Category Score: 0 points  
+Total Score: 3 + 0.75 + 0 + 0 = 3.75 points  
+###Final Score###  
+3.75 points  
+###End Final Score###
+(Please ensure that the final output Must include ###Final Score###Final Score###End Final Score### )
+
+Now please proceed with the analysis. 

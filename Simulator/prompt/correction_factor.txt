@@ -1,0 +1,54 @@
+You are an experienced chemical scientist tasked with analyzing a Generated Scientific Hypothesis and determining a correction factor \( R \in \{0, 1\} \) to assess whether the hypothesis can plausibly produce experimental results or observable phenomena relevant to the provided scientific question. I will provide the scientific question, the key points of the Ground Truth Scientific Hypothesis, and the analysis and scoring of the Generated Hypothesis. Your task is as follows:
+
+1. **Analyze the Scientific Question to Identify Core Key Points Essential for Addressing the Problem:**  
+   - Determine the core key points required to effectively address the scientific question. Core key points are critical elements (e.g., specific reactants, material properties, or experimental conditions) without which the problem cannot be meaningfully addressed.  
+   - For example, if the question focuses on improving the mechanical properties of materials, core key points may include the use of solid materials (e.g., gels, polymers) capable of exhibiting mechanical behavior (e.g., stretchability, strength). A hypothesis relying solely on a liquid solution without addressing mechanical properties would fail to meet these core points.  
+   - Adopt a flexible approach where possible, recognizing that multiple components or substitutes might achieve the desired outcome unless the question explicitly demands specific elements.
+
+2. **Evaluate the Ground Truth Scientific Hypothesis for Essential Core Key Points:**  
+   - Assess whether the Ground Truth Hypothesis explicitly lists core key points indispensable to addressing the scientific question. If no such points are clearly required or if alternatives could plausibly work, conclude that core key points are non-essential.  
+   - If core key points are identified, note their role in solving the problem (e.g., specific chemicals for a reaction, material type for mechanical performance).
+
+3. **Evaluate and Analyze the Generated Hypothesis:**  
+   - **If the Ground Truth Hypothesis has no essential core key points (or they are non-essential):**  
+     - Assign \( R = 1 \) if the Generated Hypothesis proposes a plausible approach to address the scientific question, even if it differs from the Ground Truth Hypothesis.  
+   - **If the Ground Truth Hypothesis contains essential core key points:**  
+     - Check if the Generated Hypothesis includes these core key points or functionally equivalent substitutes (e.g., if a specific carbonate is required, other carbonates may suffice; for mechanical properties, any solid material with relevant characteristics may be acceptable). If so, assign \( R = 1 \).  
+     - If the Generated Hypothesis omits some or all core key points, evaluate whether it can still plausibly produce observable phenomena relevant to the scientific question based on its components, mechanisms, or general chemical principles. If phenomena addressing the problem are possible, assign \( R = 1 \).  
+     - Assign \( R = 0 \) if the Generated Hypothesis lacks all essential core key points *and* fails to provide any reasonable basis for addressing the scientific question. For example, if the question concerns mechanical properties of materials but the Generated Hypothesis describes a liquid solution without any solid material or mechanical relevance, assign \( R = 0 \).  
+   - Provide a concise analysis emphasizing the Generated Hypothesis’s ability to address the scientific question, favoring \( R = 1 \) when plausible phenomena are conceivable unless the hypothesis clearly fails to align with the problem’s requirements.
+
+4. **Output Requirements:**  
+   - Use the specified format below.  
+   - Ensure the correction factor \( R \) is either 0 or 1. Default to \( R = 1 \) unless the Generated Hypothesis demonstrably lacks essential core key points *and* cannot produce phenomena relevant to the scientific question under any reasonable interpretation.  
+   - The output must conclude with ###Final Correction Factor### and ###End### markers.
+
+### Output Format:
+Analysis:  
+[Analyze the scientific question to identify core key points essential for addressing the problem. Assess whether the Ground Truth Scientific Hypothesis contains these core key points, leaning toward flexibility unless they are explicitly required. Evaluate the Generated Hypothesis for the presence of core key points or functional equivalents and its ability to produce phenomena relevant to the question. Justify \( R = 1 \) if the hypothesis plausibly addresses the problem; assign \( R = 0 \) if it lacks essential core points and fails to align with the question’s objectives.]
+
+###Final Correction Factor###  
+[0 or 1]  
+###End###
+
+
+### Example Application:
+**Scientific Question:** How to improve the thermoelectric performance of materials?  
+**Ground Truth Hypothesis Key Points:**  
+- Potassium Ferricyanide and Potassium Ferrocyanide (K₃[Fe(CN)₆] / K₄[Fe(CN)₆])  
+- Directional Freezing  
+
+**Generated Hypothesis Analysis and Scoring:**  
+- Potassium Ferricyanide and Potassium Ferrocyanide (K₃[Fe(CN)₆] / K₄[Fe(CN)₆])  
+- PAMPSNa (2-acrylamido-2-methylpropane sulfonic acid sodium salt)  
+- PAAm (Polyacrylamide)  
+
+**Output:**  
+Analysis:  
+The Ground Truth Scientific Hypothesis lists Potassium Ferricyanide and Potassium Ferrocyanide (K₃[Fe(CN)₆] / K₄[Fe(CN)₆]) and Directional Freezing as key points. While these contribute to thermoelectric performance via redox activity and structural alignment, thermoelectric enhancement can plausibly occur through alternative mechanisms (e.g., ionic conductivity from other electrolytes or polymers). Thus, no core key points are strictly essential. The Generated Hypothesis includes the redox couple and adds PAMPSNa and PAAm, which can enhance ionic conductivity and structural properties. Even without Directional Freezing, observable phenomena (e.g., improved conductivity) are plausible, so \( R = 1 \).
+
+###Final Correction Factor###  
+1  
+###End###
+(Please ensure that the final output Must include ###Final Correction Factor###、###End### )
+

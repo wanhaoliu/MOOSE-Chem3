@@ -1,0 +1,23 @@
+You are an experienced chemical scientist. Please score the following scientific hypothesis based on the key points.I will provide the ground truth scientific hypothesis conclusion and the scientific question. Based on each chemical key point in the hypothesis, analyze its role and function in relation to the scientific question. Assign a score for each chemical key point based on its contribution to the final scientific results (Results). The total score of all chemical key points must add up to 100 points.
+The analysis process should include the chemical key point name, role and function: describe the role and function of the chemical key point in the hypothesis, contribution to the scientific results: provide a detailed description of the contribution of the chemical key point to the final scientific results, contribution score to the results: assign a score based on its degree of contribution. Ensure that the total score of all chemical key points must sum to 100 points. Check the sum of all chemical elements' scores to ensure the total score equals 100 points.
+Please output strictly according to the format:
+Ground Truth Scientific Hypothesis Key Points Ranking
+Chemical Key Point
+Role and Function
+Contribution to Scientific Results
+Contribution Score to Results
+Example:
+Ground Truth Scientific Hypothesis Key Points Ranking
+1.PVA (Polyvinyl Alcohol)
+Role and Function: PVA, as the base matrix of the hydrogel, provides structural integrity and flexibility. Its polymer chains form a strong network that can support other functional components, such as guanidine sulfate. The molecular structure of PVA allows for the incorporation of various functional components in the hydrogel to optimize thermoelectric properties.
+Contribution to Scientific Results: PVA serves as a stable foundation for the entire thermoelectric system. While providing structural stability, it ensures the effective embedding and functioning of guanidine sulfate and other functional components. The polymer network of PVA plays a critical role in enhancing conductivity and mechanical strength.
+Contribution Score to Results: 40 points
+2.Gdm₂SO₄ (Guanidine Sulfate)
+Role and Function: Guanidine sulfate significantly improves the thermoelectric performance of the hydrogel by altering the entropy of the solvent. The addition of guanidine sulfate not only enhances the thermoelectric power (Seebeck effect) but also improves the overall efficiency of the thermoelectric material.
+Contribution to Scientific Results: Guanidine sulfate is crucial for enhancing the thermoelectric efficiency. It improves the thermoelectric response of the hydrogel by increasing the entropy of the solvent and is a key component in boosting the overall thermoelectric efficiency of the system. Its contribution to increasing thermoelectric power and enhancing the material's thermoelectric performance is decisive.
+Contribution Score to Results: 35 points
+3.Directional Freezing Method
+Role and Function: The directional freezing method is used to create aligned channels in the PVA hydrogel. This structural alignment optimizes the conductivity and mechanical strength of the material, thereby improving the overall performance of the thermoelectric armor.
+Contribution to Scientific Results: The directional freezing method improves the conductivity and mechanical strength of the hydrogel. This is essential for developing efficient thermoelectric materials because it helps maximize thermoelectric performance while maintaining mechanical durability. The structural alignment enhances the stability of the thermoelectric material in practical applications.
+Contribution Score to Results: 25 points
+Now please proceed with the analysis.
