@@ -1,13 +1,15 @@
 [
  [
-  "How to achieve high photocurrent in a pyroelectric eutectogel photodetector by optimizing the electrode area?"
+  "How to achieve high photocurrent in a pyroelectric eutectogel photodetector by varying the incident light wavelength?"
  ],
  [
-  "Fabrication of a photodetector using a Cu electrode with an area of 40 mm2 on a PVA-based eutectogel."
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 455 nm laser illumination at zero bias."
  ],
  [
-  "Fabrication of a photodetector using a Cu electrode with an area of 40 mm2 on a PVA-based eutectogel.",
-  "Fabrication of a photodetector using a Cu electrode with an area of 30 mm2 on a PVA-based eutectogel.",
-  "Fabrication of a photodetector using a Cu electrode with an area of 18 mm2 on a PVA-based eutectogel."
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 455 nm laser illumination at zero bias.",
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 365 nm laser illumination at zero bias.",
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 590 nm laser illumination at zero bias.",
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 625 nm laser illumination at zero bias.",
+  "Measurement of the photoresponse of a Cu/eutectogel/Cu device under 1300 nm laser illumination at zero bias."
  ]
 ]

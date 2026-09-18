@@ -1,13 +1,13 @@
 [
  [
-  "How to achieve high specific capacity in zinc-bromine batteries at various current densities by using an amphiphilic charge moderator?"
+  "How to achieve high grain surface area in metal-halide perovskite thin films by selecting specific grain morphologies?"
  ],
  [
-  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 1 mA cm-2."
+  "Analysis of Type-II grains which exhibit surface concavity and large lateral dimensions within the microstructural database."
  ],
  [
-  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 1 mA cm-2.",
-  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 5 mA cm-2.",
-  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 20 mA cm-2."
+  "Analysis of Type-II grains which exhibit surface concavity and large lateral dimensions within the microstructural database.",
+  "Analysis of Type-I grains which are characterized by a lack of surface concavity and smaller lateral dimensions.",
+  "Analysis of the most frequent grain surface area range for Type-I grains identified by the GrainBot toolkit."
  ]
 ]

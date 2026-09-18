@@ -1,13 +1,13 @@
 [
  [
-  "How to achieve high thermopower in double-network thermocells by adjusting the concentration of the redox couple?"
+  "How to achieve high output power in double-network thermocells by controlling the tensile strain?"
  ],
  [
-  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- redox couple."
+  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- and 3 M NaCl, stretched to a tensile strain of 0%."
  ],
  [
-  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- redox couple.",
-  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.2 M [Fe(CN)6]4-/3- redox couple.",
-  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.1 M [Fe(CN)6]4-/3- redox couple."
+  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- and 3 M NaCl, stretched to a tensile strain of 0%.",
+  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- and 3 M NaCl, stretched to a tensile strain of 20%.",
+  "Double-network thermocell composed of P(AM-co-AMPS) and PAM networks, loaded with 0.4 M [Fe(CN)6]4-/3- and 3 M NaCl, stretched to a tensile strain of 40%."
  ]
 ]

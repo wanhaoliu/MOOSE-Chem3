@@ -1,13 +1,15 @@
 [
  [
-  "How to achieve high energy absorption in a tensegrity-inspired auxetic metamaterial unit cell by adjusting spring stiffness and loading rates?"
+  "How to improve the surface charge density of all-cellulose triboelectric nanogenerators by pairing functionalized cellulose films with contrasting electronic properties?"
  ],
  [
-  "A regular triangular unit cell configured with a tension spring stiffness of 0.003 N/mm and a compression spring stiffness of 0.749 N/mm subjected to quasi-static compression."
+  "All-cellulose triboelectric nanogenerator using amine-functionalized cellulose (Cell-NH2) as the positive layer and cyano-functionalized cellulose (Cell-CN) as the negative layer."
  ],
  [
-  "A regular triangular unit cell configured with a tension spring stiffness of 0.003 N/mm and a compression spring stiffness of 0.749 N/mm subjected to quasi-static compression.",
-  "A regular triangular unit cell configured with a tension spring stiffness of 0.027 N/mm and a compression spring stiffness of 0.749 N/mm subjected to quasi-static compression.",
-  "A regular triangular unit cell configured with a tension spring stiffness of 0.027 N/mm and a compression spring stiffness of 0.484 N/mm subjected to quasi-static compression at a loading rate of 50 mm/min."
+  "All-cellulose triboelectric nanogenerator using amine-functionalized cellulose (Cell-NH2) as the positive layer and cyano-functionalized cellulose (Cell-CN) as the negative layer.",
+  "All-cellulose triboelectric nanogenerator using amine-functionalized cellulose (Cell-NH2) as the positive layer and fluoro-functionalized cellulose (Cell-F) as the negative layer.",
+  "All-cellulose triboelectric nanogenerator using amine-functionalized cellulose (Cell-NH2) as the positive layer and chloro-functionalized cellulose (Cell-Cl) as the negative layer.",
+  "All-cellulose triboelectric nanogenerator using amine-functionalized cellulose (Cell-NH2) as the positive layer and pristine regenerated cellulose as the negative layer.",
+  "All-cellulose triboelectric nanogenerator using pristine regenerated cellulose for both the positive and negative layers."
  ]
 ]

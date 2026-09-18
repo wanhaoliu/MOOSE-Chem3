@@ -1,13 +1,14 @@
 [
  [
-  "How to achieve high rate-dependency intensity in granular matter by selecting specific particle types?"
+  "How to improve the yield stress of rice-based granular matter by increasing confining pressure?"
  ],
  [
-  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and subjected to triaxial compression at strain rates of 8.33e-4/s and 8.33e-1/s."
+  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s."
  ],
  [
-  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and subjected to triaxial compression at strain rates of 8.33e-4/s and 8.33e-1/s.",
-  "Millet particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and subjected to triaxial compression at strain rates of 8.33e-4/s and 8.33e-1/s.",
-  "Resin-printed rice-shaped particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and subjected to triaxial compression at strain rates of 8.33e-4/s and 8.33e-1/s."
+  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s.",
+  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 40 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s.",
+  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 20 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s.",
+  "Rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 0 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s."
  ]
 ]

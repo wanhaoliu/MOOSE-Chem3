@@ -1,13 +1,14 @@
 [
  [
-  "How to improve the yield stress of rice-based granular matter through surface modification?"
+  "How to achieve a high friction coefficient in granular particles by reducing loading velocity?"
  ],
  [
-  "Natural rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s."
+  "Natural rice particles glued to panels and sheared under a 3 N normal force at a loading velocity of 1 mm/min."
  ],
  [
-  "Natural rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s.",
-  "Resin-printed rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s.",
-  "PTFE-coated rice particles packed in a silicone membrane (10 mm x 10 mm x 20 mm) under 60 kPa vacuum pressure and compressed at a strain rate of 8.33e-4/s."
+  "Natural rice particles glued to panels and sheared under a 3 N normal force at a loading velocity of 1 mm/min.",
+  "Natural rice particles glued to panels and sheared under a 3 N normal force at a loading velocity of 10 mm/min.",
+  "Natural rice particles glued to panels and sheared under a 3 N normal force at a loading velocity of 100 mm/min.",
+  "Natural rice particles glued to panels and sheared under a 3 N normal force at a loading velocity of 1000 mm/min."
  ]
 ]

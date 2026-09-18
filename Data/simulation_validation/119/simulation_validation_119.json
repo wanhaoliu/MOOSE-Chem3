@@ -1,13 +1,14 @@
 [
  [
-  "How to achieve high power factor in GeTe-based materials by CuI addition?"
+  "How to improve the short-circuit current of an Al2O3/UIO-66/PVDF liquid stream-current generator by optimizing the active material to PVDF binder mass ratio?"
  ],
  [
-  "Ge1-x/2Te1-x + 0.08CuI sample synthesized via melting and spark plasma sintering, measured at 300 K"
+  "A liquid stream-current generator using an Al2O3/UIO-66 composite active layer with a mass ratio of active material to PVDF binder of 20:1."
  ],
  [
-  "Ge1-x/2Te1-x + 0.08CuI sample synthesized via melting and spark plasma sintering, measured at 300 K",
-  "Ge1-x/2Te1-x + 0.06CuI sample synthesized via melting and spark plasma sintering, measured at 300 K",
-  "Ge1-x/2Te1-x + 0.04CuI sample synthesized via melting and spark plasma sintering, measured at 300 K"
+  "A liquid stream-current generator using an Al2O3/UIO-66 composite active layer with a mass ratio of active material to PVDF binder of 20:1.",
+  "A liquid stream-current generator using an Al2O3/UIO-66 composite active layer with a mass ratio of active material to PVDF binder of 10:1.",
+  "A liquid stream-current generator using an Al2O3/UIO-66 composite active layer with a mass ratio of active material to PVDF binder of 30:1.",
+  "A liquid stream-current generator using an Al2O3/UIO-66 composite active layer with a mass ratio of active material to PVDF binder of 40:1."
  ]
 ]

@@ -6,7 +6,7 @@ MOOSE-Chem3 is a Python-based tool for **feedback-guided scientific hypothesis r
 Key features:
 - Simulator modeling hypothesis performance based on similarity to ground truth with noise perturbation.
 - Clustering-based ranking using simulated experimental results.
-- Datasets: 51 chemical problems (each with 64 hypotheses) and 178 cutting-edge questions (534 hypotheses).
+- Datasets: 51 chemical problems (each with 64 hypotheses) and 178 cutting-edge questions (612 hypotheses).
 - Outperforms pre-experiment baselines in experiments.
 
 ## Quick Start
@@ -38,8 +38,8 @@ Key features:
 
 ## Datasets
 - **Chemical Problems**: 51 problems, each with 64 hypotheses, in `Data/gdth_and_gene_hyp_add_id_64.json`. Sourced from top-tier journals (Nature, Science, etc.).
-- **Simulation Validation**: 178 cutting-edge chemical questions with 534 hypotheses in `Data/simulation_validation`.
-- **Real Experiment Results**: 534 normalized experimental outcomes in `Data/real_experiment_normalized_values.json`.
+- **Simulation Validation**: 178 cutting-edge chemical questions with 612 hypotheses in `Data/simulation_validation`.
+- **Real Experiment Results**: 612 normalized experimental outcomes in `Data/real_experiment_normalized_values.json`.
 
 ## Usage
 
@@ -86,7 +86,7 @@ Compare simulated results with real experiment outcomes:
 ```bash
 python ./Method/simulator_evaluate.py --data_path Data/real_experiment_normalized_values.json --method_path <method_output>
 ```
-- `--data_path`: Path to 534 real experiment results (default: `Data/real_experiment_normalized_values.json`).
+- `--data_path`: Path to 612 real experiment results (default: `Data/real_experiment_normalized_values.json`).
 - `<method_output>`: Path to simulated results.
 
 ## Dependencies

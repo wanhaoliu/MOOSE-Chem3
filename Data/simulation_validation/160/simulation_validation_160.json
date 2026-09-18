@@ -1,13 +1,14 @@
 [
  [
-  "How to achieve high diffusion potential in Ti3C2Tx membranes by optimizing membrane structure and cation type?"
+  "How to achieve high power conversion efficiency in polymer solar cells by incorporating small molecular acceptors into the polymeric acceptor matrix?"
  ],
  [
-  "Bamboo-inspired Ti3C2Tx membrane (2 um thick) with aligned nanochannels and hydrogen-bonding networks tested with H+ ions under a 1000-fold concentration gradient."
+  "Fabrication of a polymer solar cell with a PM6 donor and a PY-IT acceptor containing 2% C5-16 small molecule, using an ITO/PEDOT:PSS/active layer/PDINN/Ag device architecture."
  ],
  [
-  "Bamboo-inspired Ti3C2Tx membrane (2 um thick) with aligned nanochannels and hydrogen-bonding networks tested with H+ ions under a 1000-fold concentration gradient.",
-  "Pristine Ti3C2Tx membrane (2 um thick) with disordered nanochannels tested with H+ ions under a 1000-fold concentration gradient.",
-  "Bamboo-inspired Ti3C2Tx membrane (2 um thick) with aligned nanochannels and hydrogen-bonding networks tested with K+ ions under a 1000-fold concentration gradient."
+  "Fabrication of a polymer solar cell with a PM6 donor and a PY-IT acceptor containing 2% C5-16 small molecule, using an ITO/PEDOT:PSS/active layer/PDINN/Ag device architecture.",
+  "Fabrication of a polymer solar cell with a PM6 donor and a PY-IT acceptor containing 2% C5-16 small molecule, using an ITO/MoO3/active layer/C60/BCP/Ag device architecture.",
+  "Fabrication of a polymer solar cell with a PM6 donor and a PY-IT acceptor containing 2% L8-BO small molecule, using an ITO/MoO3/active layer/C60/BCP/Ag device architecture.",
+  "Fabrication of a polymer solar cell with a PM6 donor and a PY-IT reference acceptor, using an ITO/MoO3/active layer/C60/BCP/Ag device architecture."
  ]
 ]

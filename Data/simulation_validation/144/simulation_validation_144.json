@@ -1,13 +1,13 @@
 [
  [
-  "How to improve the electrochemically active surface area retention of Pt/C catalysts through subsurface boron single-atom interstitial doping?"
+  "How to improve the predictive accuracy of catalyst and synthesis discovery models through coarse representational alignment?"
  ],
  [
-  "Commercial Pt/C catalyst modified by a single cycle of boron atomic layer deposition followed by thermal annealing in a reducing atmosphere to facilitate boron diffusion into the Pt subsurface."
+  "Implementation of a hierarchical coarse representation for oxygen evolution reaction activity prediction by grouping noisy continuous overpotential labels into three broad bands (high, medium, and low) and training separate regressors within each band."
  ],
  [
-  "Commercial Pt/C catalyst modified by a single cycle of boron atomic layer deposition followed by thermal annealing in a reducing atmosphere to facilitate boron diffusion into the Pt subsurface.",
-  "Commercial Pt/C catalyst modified by the impregnation method with boron followed by thermal annealing in a reducing atmosphere.",
-  "Commercial carbon-supported Pt catalyst tested in its original state without boron modification or additional thermal treatment."
+  "Implementation of a hierarchical coarse representation for oxygen evolution reaction activity prediction by grouping noisy continuous overpotential labels into three broad bands (high, medium, and low) and training separate regressors within each band.",
+  "Utilization of elemental descriptors for CO2 electroreduction catalyst performance prediction to implicitly encode trends that remain stable under realistic, reconstructed catalyst conditions.",
+  "Application of a coarse two-class label representation (gel vs. no-gel) for gelation prediction in a mixed-metal sol-gel synthesis workflow to eliminate ambiguity from subjective intermediate classes."
  ]
 ]

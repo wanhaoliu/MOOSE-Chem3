@@ -1,13 +1,14 @@
 [
  [
-  "How to improve the short-circuit current of a liquid stream-current generator through the dipole effect by optimizing the ferroelectric layer thickness?"
+  "How to improve the Coulombic efficiency of static zinc-bromine batteries by using an amphiphilic charge moderator?"
  ],
  [
-  "A liquid stream-current generator with a 20 μm thick ferroelectric PVDF film introduced between the top electrode and the active layer."
+  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 1 mA cm-2."
  ],
  [
-  "A liquid stream-current generator with a 20 μm thick ferroelectric PVDF film introduced between the top electrode and the active layer.",
-  "A liquid stream-current generator with a 40 μm thick ferroelectric PVDF film introduced between the top electrode and the active layer.",
-  "A liquid stream-current generator with a 60 μm thick ferroelectric PVDF film introduced between the top electrode and the active layer."
+  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 1 mA cm-2.",
+  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 5 mA cm-2.",
+  "Static Zn-Br battery using 0.5 M ZnBr2 + 0.1 M CTABr electrolyte at a current density of 20 mA cm-2.",
+  "Static Zn-Br battery using pristine 0.5 M ZnBr2 electrolyte at a current density of 1 mA cm-2."
  ]
 ]
