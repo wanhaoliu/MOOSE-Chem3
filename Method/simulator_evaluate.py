@@ -19,9 +19,8 @@ class EvaluateSimulator(object):
         with open(method_path, 'r', encoding='utf-8') as f:
             method_exp_scores = json.load(f)
 
-        assert len(real_exp_scores) == 30, f"Expected 30 groups in real data, got {len(real_exp_scores)}"
-        assert len(method_exp_scores) == 30, f"Expected 30 groups in method data, got {len(method_exp_scores)}"
-
+        assert len(real_exp_scores) == len(method_exp_scores), f"Group count mismatch: real {len(real_exp_scores)} vs method {len(method_exp_scores)}"
+        
         return real_exp_scores, method_exp_scores
 
     # def load_real_data(self, data_path):
@@ -35,9 +34,8 @@ class EvaluateSimulator(object):
     #     with open(os.path.join(data_path, "baseline1.json"), 'r', encoding='utf-8') as f:
     #         method_exp_scores = json.load(f)
 
-    #     assert len(real_exp_scores) == 30, f"Expected 30 groups in real data, got {len(real_exp_scores)}"
-    #     assert len(method_exp_scores) == 30, f"Expected 30 groups in method data, got {len(method_exp_scores)}"
-
+    #     assert len(real_exp_scores) == len(method_exp_scores), f"Group count mismatch: real {len(real_exp_scores)} vs method {len(method_exp_scores)}"
+    #     
     #     return real_exp_scores, method_exp_scores
 
     def evaluate(self):
@@ -55,7 +53,8 @@ class EvaluateSimulator(object):
         # Count the number of groups participating in the calculation
         valid_groups = 0
 
-        for group_id in range(30):
+        num_groups = len(real_exp_scores)
+        for group_id in range(num_groups):
             gdth_scores = real_exp_scores[group_id]
             simulator_scores = method_exp_scores[group_id]
 
@@ -103,7 +102,7 @@ class EvaluateSimulator(object):
                 print(f"Warning: Group {group_id + 1} has no data. Skipping.")
 
     
-        print(f"Total valid groups evaluated: {valid_groups}/30")
+        print(f"Total valid groups evaluated: {valid_groups}/{num_groups}")
         print(f"Number of groups with Spearman = 1.0000: {perfect_spearman_count}/{valid_groups}")
 
         # Calculate average indicator
