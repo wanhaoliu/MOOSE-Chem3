@@ -64,7 +64,8 @@ class EvaluateSimulator(object):
 
             if gdth_scores and simulator_scores:
                 spearman_coef, _ = spearmanr(gdth_scores, simulator_scores)
-                spearman_scores.append(spearman_coef)
+                if not np.isnan(spearman_coef):  # undefined when a group's scores are constant
+                    spearman_scores.append(spearman_coef)
 
                 # Statistics for the case where Spearman = 1.0000
                 if abs(spearman_coef - 1.0) < 1e-6:  #
@@ -138,7 +139,7 @@ class EvaluateSimulator(object):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Evaluate Simulator')
     parser.add_argument("--data_path", type=str, default="Data/real_experiment_normalized_values.json", help="Path to the dataset")
-    parser.add_argument("--method_path", type=str, default="./baseline1.json", help="Name of the method data file (e.g., baseline1.json)")
+    parser.add_argument("--method_path", type=str, required=True, help="Name of the method data file (e.g., baseline1.json)")
     args = parser.parse_args()
 
     eval_simulator = EvaluateSimulator(args)

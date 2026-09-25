@@ -35,6 +35,7 @@ Key features:
    ```bash
    pip install -r requirements.txt
    ```
+5. Set the API key: `cp .env.example .env`, fill in `OPENAI_API_KEY` and `MOOSE_CHEM3_MODEL`, then `set -a; source .env; set +a`.
 
 ## Datasets
 - **Chemical Problems**: 51 problems, each with 64 hypotheses, in `Data/gdth_and_gene_hyp_add_id_64.json`. Sourced from top-tier journals (Nature, Science, etc.).
@@ -48,14 +49,14 @@ Run hypothesis ranking for one of 51 chemical problems:
 ```bash
 python ./Method/method.py --num <id>
 ```
-- `<id>`: Problem ID (1 to 51).
+- `<id>`: Problem ID (0 to 50).
 
 ### Ablation Experiments
 Run ablation experiments with baselines:
 ```bash
 python ./Method/method_ablation_baseline.py --num <id> --baseline <0|1> --num_entries all
 ```
-- `<id>`: Problem ID (1 to 51).
+- `<id>`: Problem ID (0 to 50).
 - `--baseline`:
   - `0`: Without clustering and analysis, only simulated feedback.
   - `1`: Without clustering.
@@ -66,7 +67,7 @@ Run simulation for 178 chemical questions:
 ```bash
 python ./Method/simulation_validation.py --num <id> --rep <repetitions> --correction_factor 0
 ```
-- `<id>`: Question ID (1 to 178).
+- `<id>`: Question ID (0 to 177).
 - `<repetitions>`: Number of simulation repetitions.
 - `--correction_factor 0`: Disable correction (default: 1 to enable).
 
@@ -75,7 +76,7 @@ Run baseline simulation with Matched Score or Continuous Score:
 ```bash
 python ./Method/simulation_baseline.py --num <id> --rep <repetitions> --baseline <1|2>
 ```
-- `<id>`: Question ID (1 to 178).
+- `<id>`: Question ID (0 to 177).
 - `<repetitions>`: Number of repetitions.
 - `--baseline`:
   - `1`: Continuous Score.

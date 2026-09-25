@@ -1,13 +1,19 @@
 import time
 import requests
 import json
+import os
 
 
-Baseurl =""
-Skey = ""
+Baseurl = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com")
+Skey = os.environ.get("OPENAI_API_KEY", "")
+Model = os.environ.get("MOOSE_CHEM3_MODEL", "")
 
 
 def api_request(messages,temperature = 0, max_retries=60, sleep_time=15):
+    if not Skey:
+        raise RuntimeError("OPENAI_API_KEY is not set; see .env.example")
+    if not Model:
+        raise RuntimeError("MOOSE_CHEM3_MODEL is not set; see .env.example")
     # url = Baseurl + "/v1/chat/completions"
     url = Baseurl + "/v1/chat/completions"
     headers = {
@@ -17,8 +23,7 @@ def api_request(messages,temperature = 0, max_retries=60, sleep_time=15):
         'Content-Type': 'application/json'
     }
     payload = json.dumps({
-        # "model": "gpt-4o-2024-08-06",
-        "model": "gpt-4o-mini",
+        "model": Model,
         "messages": [{"role": "system", "content": "You are a helpful assistant."},
                      {"role": "user", "content": messages}],
         "temperature":temperature
