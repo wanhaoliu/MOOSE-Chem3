@@ -835,7 +835,7 @@ if __name__ == "__main__":
     parser.add_argument(
             "--num_entries",
             type=str,  # Accept as string to handle both numbers and "all"
-            default=0,
+            default="all",
             help="Number of entries to read: any positive integer or 'all'"
         )
     # The num_entries parameter represents the number of entries from the feedback experiment results for each trial.

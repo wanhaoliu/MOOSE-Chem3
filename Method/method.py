@@ -124,7 +124,6 @@ if __name__ == "__main__":
     filepath = r"./Data/gdth_and_gene_hyp_add_id_64.json"
 
     # filepath = r"./Data/processed_10_data.json"
-    # research_question_filepath = "E:\desk_mapping\science_discover\main\data\\research_question.json"
     research_question_filepath = r"./Data/background_questions.json"
 
     

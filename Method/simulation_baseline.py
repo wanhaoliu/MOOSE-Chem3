@@ -115,7 +115,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     hypotheses_file = f"./Data/simulation_validation/{args.num}" 
-    output_dir = f"./output/output-baseline2/{args.num}-{args.rep}"
+    output_dir = f"./output/output-baseline{args.baseline}/{args.num}-{args.rep}"
     index = args.num
     baseline = args.baseline
     feedback_score_baseline(hypotheses_file,index,baseline,output_dir)
