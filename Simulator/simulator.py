@@ -23,16 +23,16 @@ class GaussianModifier:
         self._count_features()
 
     def _set_parameters(self):
-        if self.param == 1:
-            self.num_extrema = random.randint(0, 6)
+        if self.param == 1:      # Simple: 0-10 extrema, 0-2 plateaus or cliffs
+            self.num_extrema = random.randint(0, 10)
             # self.max_amplitude = 0.05
-            self.num_special = random.randint(0, 1)
-        elif self.param == 2:
-            self.num_extrema = random.randint(6, 12)
+            self.num_special = random.randint(0, 2)
+        elif self.param == 2:    # Medium: 0-30 extrema, 0-6 plateaus or cliffs
+            self.num_extrema = random.randint(0, 30)
             # self.max_amplitude = 0.35
-            self.num_special = random.randint(1, 3)
-        elif self.param == 3:
-            self.num_extrema = random.randint(12, 60)
+            self.num_special = random.randint(0, 6)
+        elif self.param == 3:    # Complex: >=30 extrema, >=3 plateaus or cliffs
+            self.num_extrema = random.randint(30, 60)
             # self.max_amplitude = 0.75
             self.num_special = random.randint(3, 6)
         else:
